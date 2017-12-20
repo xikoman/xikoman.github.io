@@ -1,0 +1,43 @@
+<p><strong>UESC &ndash; Ci&ecirc;ncia da Computa&ccedil;&atilde;o &ndash; Organiza&ccedil;&atilde;o e Arquitetura de Computadores</strong><strong> </strong></p>
+
+<p><strong>Gabriel Farias Tranquilli</strong></p>
+
+<p><strong>&nbsp;</strong></p>
+
+<p style="text-align: center;"><span style="font-size:20px"><strong>Von Neumann X Harvard</strong></span></p>
+
+<p style="text-align: center;"><br />
+<span style="font-size:16px"><strong>Von Neumann</strong></span></p>
+
+<p><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A arquitetura de Von Neumann &eacute; principalmente caracterizada por armazenar os dados na mesma &aacute;rea da mem&oacute;ria em que armazena os programas, agilizando o processo de manipula&ccedil;&atilde;o desses programas e evitando o uso de conex&otilde;es de maiores dist&acirc;ncias at&eacute; os dados. Ela formalizou o projeto l&oacute;gico de um computador, j&aacute; que apresentava seus elementos de forma compacta.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A m&aacute;quina de Von Neumann &eacute; composta por: Mem&oacute;ria, Unidade L&oacute;gica Aritm&eacute;tica (ULA), Unidade de Controle de Programa (UC) e dispositivos de entrada e sa&iacute;da (E/S ou I/O).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A mem&oacute;ria era de grande import&acirc;ncia, pois aparelhos que realizam grandes c&aacute;lculos precisam de espa&ccedil;o para armazenar seus resultados, al&eacute;m de facilitar a comunica&ccedil;&atilde;o entre os dados e o programa. Inicialmente tinha apenas 4096 palavras de 40 bits, compostos por 2 instru&ccedil;&otilde;es de 20 bits ou apenas 1 inteiro. Essas instru&ccedil;&otilde;es tinham 8 bits para o tipo e 12 bits para o endere&ccedil;amento de mem&oacute;ria.</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A ULA &eacute; uma unidade especializada respons&aacute;vel por realizar as opera&ccedil;&otilde;es l&oacute;gicas (boolean) e aritm&eacute;ticas.&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; J&aacute; a UC &eacute; quem dita a sequ&ecirc;ncia correta de opera&ccedil;&otilde;es a ser executada, organizando as instru&ccedil;&otilde;es e os dados. Ela d&aacute; ordens de controle para os outros elementos da m&aacute;quina.</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Os dispositivos de E/S s&atilde;o respons&aacute;veis por enviar e receber instru&ccedil;&otilde;es e dados da CPU. A CPU, por sua vez, &eacute; o conjunto da UC com a ULA e alguns registradores, que s&atilde;o mem&oacute;rias de alta velocidade usadas para guardar dados tempor&aacute;rios, mas de prioridade alta. Por isso s&atilde;o t&atilde;o pr&oacute;ximas da ULA. Existem registradores com dados pr&eacute;-carregados, chamados de registradores de fun&ccedil;&atilde;o espec&iacute;fica. Existem tamb&eacute;m os OP Codes, que s&atilde;o instru&ccedil;&otilde;es espec&iacute;ficas para a arquitetura de cada m&aacute;quina. O conceito de Clock tamb&eacute;m era muito importante, pois &eacute; com ele que a CPU pode se referenciar com o tempo. &Eacute; gerada uma onda simples de &ldquo;ligado e desligado&rdquo; com tempo espec&iacute;fico, necess&aacute;ria para garantir um padr&atilde;o nas a&ccedil;&otilde;es da CPU. Interrup&ccedil;&otilde;es, ou sinais de controles externos, s&atilde;o sinais emitidos por dispositivos externos ao processador, os dispositivos de E/S, usados para que se possam perceber a&ccedil;&otilde;es externas.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As instru&ccedil;&otilde;es e os dados ficam armazenados em endere&ccedil;os na mem&oacute;ria. Esses endere&ccedil;os s&atilde;o posi&ccedil;&otilde;es &uacute;nicas na mem&oacute;ria. Para que as informa&ccedil;&otilde;es sejam armazenadas, elas devem ser transmitidas atrav&eacute;s de um barramento, que seriam conex&otilde;es entre os componentes da m&aacute;quina.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; As m&aacute;quinas de Von Neumann t&ecirc;m um ciclo de execu&ccedil;&atilde;o caracter&iacute;stico, que se d&aacute; da seguinte forma:</p>
+
+<p>No in&iacute;cio do ciclo a UC busca pela pr&oacute;xima instru&ccedil;&atilde;o na mem&oacute;ria principal. A instru&ccedil;&atilde;o &eacute; carregada e decodificada. Em seguida a UC verifica &nbsp;se existem operandos necess&aacute;rios, trazendo-os da mem&oacute;ria para os registradores se for o caso. A ULA ent&atilde;o executa a instru&ccedil;&atilde;o e ent&atilde;o a UC verifica os resultados e os armazena j&aacute; na mem&oacute;ria ou os mant&eacute;m pr&oacute;ximos, em registradores. Uma pr&oacute;xima instru&ccedil;&atilde;o &eacute; buscada, iniciando outro ciclo.&nbsp;</p>
+
+<p style="text-align: center;"><strong>Gargalo de Von Neumann</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Apesar da arquitetura de Von Neumann ser muito bem elaborada, ela tinha seus defeitos. O mais famoso deles ficou conhecido como Gargalo de Von Neumann.</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Esse problema acontecia porque o barramento que levava dados era o mesmo que levava as instru&ccedil;&otilde;es, e ainda levavam para a mesma mem&oacute;ria, gerando tempo ocioso para a CPU, pois dessa forma ela era mais r&aacute;pida do que o canal de comunica&ccedil;&atilde;o com a mem&oacute;ria. Considerando que a CPU &eacute; muitas vezes mais r&aacute;pida do que a mem&oacute;ria, esse problema piorava com o tempo, pois os processadores avan&ccedil;avam e as mem&oacute;rias ficavam para tr&aacute;s. Para resolver isso surgiu a arquitetura de Harvard.</p>
+
+<p style="text-align: center;"><span style="font-size:16px"><strong>Harvard</strong></span></p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Surgindo como uma solu&ccedil;&atilde;o para o gargalo de Von Neumann, a arquitetura de Harvard era parecida com essa primeira, mas suas diferen&ccedil;as foram quem chamaram aten&ccedil;&atilde;o.</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ao separar os barramentos para instru&ccedil;&atilde;o dos barramentos para dados, parte do problema j&aacute; foi resolvida. Para deixar o gargalo completamente para tr&aacute;s, foram criadas tamb&eacute;m mem&oacute;rias espec&iacute;ficas para barramentos e outras para dados.</p>
