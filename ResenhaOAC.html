@@ -4,9 +4,9 @@
 
 <p><strong>&nbsp;</strong></p>
 
-<p style="text-align: center;"><span style="font-size:20px"><strong>Von Neumann X Harvard</strong></span></p>
+<p style="text-align:center"><span style="font-size:20px"><strong>Von Neumann X Harvard</strong></span></p>
 
-<p style="text-align: center;"><br />
+<p style="text-align:center"><br />
 <span style="font-size:16px"><strong>Von Neumann</strong></span></p>
 
 <p><br />
@@ -30,14 +30,28 @@
 
 <p>No in&iacute;cio do ciclo a UC busca pela pr&oacute;xima instru&ccedil;&atilde;o na mem&oacute;ria principal. A instru&ccedil;&atilde;o &eacute; carregada e decodificada. Em seguida a UC verifica &nbsp;se existem operandos necess&aacute;rios, trazendo-os da mem&oacute;ria para os registradores se for o caso. A ULA ent&atilde;o executa a instru&ccedil;&atilde;o e ent&atilde;o a UC verifica os resultados e os armazena j&aacute; na mem&oacute;ria ou os mant&eacute;m pr&oacute;ximos, em registradores. Uma pr&oacute;xima instru&ccedil;&atilde;o &eacute; buscada, iniciando outro ciclo.&nbsp;</p>
 
-<p style="text-align: center;"><strong>Gargalo de Von Neumann</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Von Neumann utilizava arquitetura CISC, ou Computador com conjunto complexo de instru&ccedil;&otilde;es. Essa &eacute; uma arquitetura mais vers&aacute;til, e que justifica a presen&ccedil;a das m&aacute;quinas de Von Neumann nos computadores de hoje.</p>
+
+<p style="text-align:center"><strong>Gargalo de Von Neumann</strong></p>
 
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Apesar da arquitetura de Von Neumann ser muito bem elaborada, ela tinha seus defeitos. O mais famoso deles ficou conhecido como Gargalo de Von Neumann.</p>
 
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Esse problema acontecia porque o barramento que levava dados era o mesmo que levava as instru&ccedil;&otilde;es, e ainda levavam para a mesma mem&oacute;ria, gerando tempo ocioso para a CPU, pois dessa forma ela era mais r&aacute;pida do que o canal de comunica&ccedil;&atilde;o com a mem&oacute;ria. Considerando que a CPU &eacute; muitas vezes mais r&aacute;pida do que a mem&oacute;ria, esse problema piorava com o tempo, pois os processadores avan&ccedil;avam e as mem&oacute;rias ficavam para tr&aacute;s. Para resolver isso surgiu a arquitetura de Harvard.</p>
 
-<p style="text-align: center;"><span style="font-size:16px"><strong>Harvard</strong></span></p>
+<p style="text-align:center"><span style="font-size:16px"><strong>Harvard</strong></span></p>
 
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Surgindo como uma solu&ccedil;&atilde;o para o gargalo de Von Neumann, a arquitetura de Harvard era parecida com essa primeira, mas suas diferen&ccedil;as foram quem chamaram aten&ccedil;&atilde;o.</p>
 
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ao separar os barramentos para instru&ccedil;&atilde;o dos barramentos para dados, parte do problema j&aacute; foi resolvida. Para deixar o gargalo completamente para tr&aacute;s, foram criadas tamb&eacute;m mem&oacute;rias espec&iacute;ficas para barramentos e outras para dados.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ao separar os barramentos para instru&ccedil;&atilde;o dos barramentos para dados, parte do problema j&aacute; foi resolvida. Para deixar o gargalo completamente para tr&aacute;s, foram criadas tamb&eacute;m mem&oacute;rias espec&iacute;ficas para barramentos e outras para dados. Dessa forma o processador pode acessar as duas mem&oacute;rias ao mesmo tempo, eliminando o tempo ocioso presente na arquitetura Von Neumann.</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; As m&aacute;quinas da Universidade de Harvard utilizavam a arquitetura RISC, ou Computador com conjunto reduzido de instru&ccedil;&otilde;es, que s&atilde;o mais simples baratos.</p>
+
+<p style="text-align: center;"><span style="font-size:16px"><strong>Compara&ccedil;&atilde;o</strong></span></p>
+
+<p>Os processadores Von Neumann processam uma informa&ccedil;&atilde;o por vez, diferente dos Harvard que evitam isso tendo barramentos e mem&oacute;rias separados para dados e instru&ccedil;&otilde;es.</p>
+
+<p>A arquitetura Von Neumann pode ser mais simples, mas &eacute; mais lenta, ao contr&aacute;rio da Harvard que &eacute; mais complexa, por&eacute;m mais r&aacute;pida.</p>
+
+<p>Os processadores Von Neumann s&atilde;o mais utilizados em PC por serem CISC, enquanto os Harvard s&atilde;o melhores em atividades espec&iacute;ficas por serem RISC.</p>
+
+<p style="text-align: center;">&nbsp;</p>
